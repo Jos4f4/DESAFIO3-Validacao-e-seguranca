@@ -2,9 +2,13 @@ package com.devsuperior.demo.dto;
 
 import com.devsuperior.demo.entities.City;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class CityDTO {
 	
 	private Long id;
+	
+	@NotBlank(message = "Nome não pode ser vazio")
 	private String name;
 	
 	public CityDTO() {
